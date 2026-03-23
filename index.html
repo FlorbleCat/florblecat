@@ -7,10 +7,98 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="./">florblecat.lol</a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="./">Home</a>
+        <a class="nav-link" href="about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <p class="eyebrow">Live profile</p>
+        <h1 class="title">Hey, I'm <span id="displayName">Florblecat</span>.</h1>
+        <p class="subtitle">
+          A small homepage with my Discord status, current Spotify track, and a few links.
+        </p>
+
+        <div class="hero-links">
+          <a id="discordLink" class="button" href="#" target="_blank" rel="noreferrer">Discord</a>
+          <a id="npOpen" class="button ghost" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Spotify</a>
+          <a class="button ghost" href="about/">About</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card">
+          <div class="profile-top">
+            <img id="avatar" class="avatar" alt="Avatar" />
+            <div class="profile-meta">
+              <div class="name-row">
+                <span id="username" class="username">loading…</span>
+                <span id="statusDot" class="status-dot" title="Discord status"></span>
+              </div>
+              <div id="statusText" class="status-text">—</div>
+            </div>
+          </div>
+
+          <div class="live-strip">
+            <div class="live-item">
+              <span class="live-label">Status</span>
+              <span id="dcStatus" class="live-value">—</span>
+            </div>
+
+            <div class="live-item">
+              <span class="live-label">Activity</span>
+              <span id="dcActivity" class="live-value">—</span>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <a id="profileDiscordLink" class="button ghost" href="#" target="_blank" rel="noreferrer">Open profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid single-grid">
+      <div class="card">
+        <div class="card-head">
+          <h2>Now Playing</h2>
+          <span id="npBadge" class="badge">loading</span>
+        </div>
+
+        <div class="nowplaying">
+          <img id="npArt" class="np-art is-hidden" alt="Album art" />
+          <div class="np-info">
+            <div id="npSong" class="np-song">Nothing playing</div>
+            <div id="npArtist" class="np-artist">Check back later</div>
+
+            <div class="progress">
+              <div id="npProgress" class="progress-bar"></div>
+            </div>
+
+            <div class="np-time">
+              <span id="npTimeNow">0:00</span>
+              <span id="npTimeTotal">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container footer-inner">
-      <span> florblecat.lol</span>
+      <span>© <span id="year"></span> florblecat.lol</span>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
